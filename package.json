@@ -1,0 +1,23 @@
+{
+  "name": "benchmark-custom-ssr-solutions",
+  "version": "1.0.0",
+  "description": "I would like to benchmark how different runtimes/libraries are performing during SSR task",
+  "scripts": {
+    "bun": "NODE_ENV=production bun react-app.bun.tsx",
+    "deno": "deno run --allow-net react-app.deno.tsx",
+    "node": "tsc react-app.node.tsx --jsx react --outDir ./dist && node dist/react-app.node.js"
+  },
+  "dependencies": {
+    "react": "next",
+    "react-dom": "next"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "bun-types": "^1.0.21",
+    "prettier": "^3.1.1"
+  }
+}
